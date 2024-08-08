@@ -1,0 +1,3 @@
+[submodule "depqbf"]
+	path = depqbf
+	url = https://github.com/lonsing/depqbf.git
