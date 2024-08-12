@@ -56,14 +56,21 @@ add_library(depqbf src/depqbf.h src/depqbf.cpp)
 target_include_directories(depqbf PUBLIC ${DEPQBF_DIR})
 target_link_libraries(depqbf PUBLIC qdpll nenofex picosat)
 
-add_custom_command(TARGET depqbf POST_BUILD
-  COMMAND ${CMAKE_COMMAND} -E create_symlink ${DEPQBF_DIR}/nenofex/libnenofex.so.1.1 ${CMAKE_BINARY_DIR}/libnenofex.so.1
-  COMMAND ${CMAKE_COMMAND} -E create_symlink ${DEPQBF_DIR}/libqdpll.so.1.0 ${CMAKE_BINARY_DIR}/libqdpll.so.1
-  COMMENT "Creating symlinks for ${LIB_NAME} shared library"
-)
-
 pybind11_add_module(depqbf_module src/depqbf_pybind.cpp)
 target_link_libraries(depqbf_module PRIVATE depqbf)
+
+# Embed the RPATH to ensure the Python module can find the libraries
+set_target_properties(depqbf_module PROPERTIES
+  BUILD_RPATH "${DEPQBF_DIR};${DEPQBF_DIR}/nenofex"
+  INSTALL_RPATH "${DEPQBF_DIR};${DEPQBF_DIR}/nenofex"
+  BUILD_WITH_INSTALL_RPATH TRUE
+)
+
+add_custom_command(TARGET depqbf POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E create_symlink ${DEPQBF_DIR}/nenofex/libnenofex.so.1.1 ${DEPQBF_DIR}/nenofex/libnenofex.so.1
+  COMMAND ${CMAKE_COMMAND} -E create_symlink ${DEPQBF_DIR}/libqdpll.so.1.0 ${DEPQBF_DIR}/libqdpll.so.1
+  COMMENT "Creating symlinks for ${LIB_NAME} shared library"
+)
 
 add_executable(main src/main.cpp)
 target_link_libraries(main depqbf)
