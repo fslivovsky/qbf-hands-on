@@ -71,6 +71,3 @@ add_custom_command(TARGET depqbf POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E create_symlink ${DEPQBF_DIR}/libqdpll.so.1.0 ${DEPQBF_DIR}/libqdpll.so.1
   COMMENT "Creating symlinks for ${LIB_NAME} shared library"
 )
-
-add_executable(main src/main.cpp)
-target_link_libraries(main depqbf)
