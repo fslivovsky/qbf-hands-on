@@ -1,3 +1,30 @@
+# QBF Hands-On Session
+
+## Benchmarks
+
+- https://qbf23.pages.sai.jku.at/gallery/qdimacs20.tar.zst
+- https://qbf23.pages.sai.jku.at/gallery/qdimacs.tar.xz
+- https://qbf23.pages.sai.jku.at/gallery/qcir20.tar.zst
+- https://qbf23.pages.sai.jku.at/gallery/qcir.tar.xz
+
+## Prenex CNF (QDIMACS) Solvers
+
+- https://github.com/ltentrup/caqe
+- https://lonsing.github.io/depqbf/
+- https://github.com/fslivovsky/qute
+- https://github.com/MikolasJanota/qesto
+
+## Prenex Non-CNF (QCIR) Solvers
+
+- https://github.com/ltentrup/quabs
+- https://github.com/MikolasJanota/qfun
+- https://github.com/fslivovsky/qute
+- https://github.com/MikolasJanota/cqesto
+
+## Preprocessors
+
+- https://fmv.jku.at/bloqqer/
+- https://projects.informatik.uni-freiburg.de/projects/dqbf/files (HQSPre)
 
 # DepQBF Python Wrapper
 
