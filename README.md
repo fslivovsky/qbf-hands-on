@@ -32,6 +32,9 @@ https://github.com/marseidl/qbffam.git
 - https://fmv.jku.at/bloqqer/
 - https://projects.informatik.uni-freiburg.de/projects/dqbf/files (HQSPre)
 
+## QRP Proof Validation and Strategy Extraction
+- https://fmv.jku.at/qbfcert/
+
 # DepQBF Python Wrapper
 
 This repository provides a simple Python wrapper for the incremental interface of the Quantified CDCL solver [DepQBF](https://lonsing.github.io/depqbf/).
