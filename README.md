@@ -33,7 +33,9 @@ https://github.com/marseidl/qbffam.git
 - https://projects.informatik.uni-freiburg.de/projects/dqbf/files (HQSPre)
 
 ## QRP Proof Validation and Strategy Extraction
+
 - https://fmv.jku.at/qbfcert/
+- https://github.com/marijnheule/qrat-trim.git
 
 # DepQBF Python Wrapper
 
