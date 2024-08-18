@@ -1,5 +1,11 @@
 # QBF Hands-On Session
 
+Below, you'll find links to generators, benchmarks, solvers, preprocessors, and (further down), a Python interface to a quantified CDCL solver.
+
+## Crafted Formula Generator
+
+https://github.com/marseidl/qbffam.git
+
 ## Benchmarks
 
 - https://qbf23.pages.sai.jku.at/gallery/qdimacs20.tar.zst
