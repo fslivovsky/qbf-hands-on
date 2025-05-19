@@ -64,7 +64,7 @@ git clone --recursive https://github.com/fslivovsky/depqbf-python.git
 Navigate to the folder and run the following command to download Nenofex and PicoSAT, two dependencies required by DepQBF:
 
 ```bash
-sh download_requirements.sh
+sh download_dependencies.sh
 ```
 
 ### Step 4: Build the Package
